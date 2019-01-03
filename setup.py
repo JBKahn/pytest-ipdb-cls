@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-    name="pytest-ipdb",
-    packages=["pytestipdb"],
+    name="pytest-ipdb-cls",
+    packages=["pytest_ipdb_cls"],
     version="0.1",
-    description="A py.test plug-in to enable drop to ipdb debugger on test failure.",
-    author="Matthew de Verteuil",
-    author_email="onceuponajooks@gmail.com",
-    url="https://github.com/mverteuil/pytest-ipdb",
+    description="A py.test helper to enable drop to ipdb debugger on test failure or when pytest.set_trace is used.",
+    author="Joseph Kahn",
+    author_email="josephbkahn@gmail.com",
+    url="https://github.com/JBKahn/pytest-ipdb-cls",
     classifiers=[
         "Environment :: Console",
         "Environment :: Plugins",
@@ -21,13 +21,7 @@ setup(
         "Topic :: Software Development :: Testing",
     ],
     install_requires=[
-        'pytest>=2.6.3',
+        'pytest>=3.1.0',
         'ipdb',
     ],
-    # the following makes a plugin available to py.test
-    entry_points = {
-        "pytest11": [
-            "pytestipdb = pytestipdb.ptipdb",
-        ]
-    },
 )
