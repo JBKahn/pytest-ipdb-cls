@@ -1,10 +1,9 @@
 language: python
 env:
-    - TOXENV=py26_pytest_2.5.2
-    - TOXENV=py27_pytest_2.5.2
-    - TOXENV=pypy_pytest_2.5.2
-    - TOXENV=py33_pytest_2.5.2
-    - TOXENV=py34_pytest_2.5.2
+    - TOXENV=py36_pytest_3.1.0
+    - TOXENV=py36_pytest_latest
+    - TOXENV=py37_pytest_3.1.0
+    - TOXENV=py37_pytest_latest
 install:
     - travis_retry pip install tox
 script:
